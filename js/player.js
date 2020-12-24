@@ -3,6 +3,7 @@ class Player{
         this.playerName=null
         this.playerNumber=null
         this.playerDistance=0
+        this.rank=0
 
 
     }
@@ -20,7 +21,7 @@ locationChild.update(JSON)
 }
 updatePlayer(){
 var playerName="players/player"+ this.playerNumber
-var JSON={playerName:this.playerName, distance:this.playerDistance}
+var JSON={playerName:this.playerName, distance:this.playerDistance, rank:this.rank}
 var locationChild=database.ref(playerName)
 locationChild.update(JSON)
 }
